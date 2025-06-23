@@ -26,7 +26,31 @@
     background-image: linear-gradient(225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
 }
 
+#usrWltBtn {
+    gap: 0.4rem;
+    height: 70%;
+    border: none;
+    margin-left: 1rem !important;
+    padding: 0px 0.8rem !important;
+    font-weight: 500;
+    border-radius: 0.6rem;
+    background-color: var(--clr-surface-a10);
+}
+
+#usrWltBtn:hover {
+    opacity: 0.8;
+}
+
+.wallet-icon {
+    width: 24px;
+    height: 24px;
+    background-color: var(--clr-surface-a20);
+    border-radius: 100%;
+}
+
 .navbar-ic-btn {
+    padding: 0px !important;
+    margin: 0px !important;
     display: flex;
     align-items: center;
     border: none;
@@ -39,34 +63,101 @@
     opacity: 0.8;
 }
 
-.asset-container {
-    background-color: var(--clr-surface-a0);
-    border-bottom: 2.5px solid var(--clr-surface-a20);
-    padding: 0px 1rem !important;
+.modal {
+    backdrop-filter: blur(10px) !important;
 }
 
-#assetBtnGroup .btn-outline-primary {
-    border: none !important;
-    border-left: 2.5px solid var(--clr-surface-a20) !important;
-    border-right: 2.5px solid var(--clr-surface-a20) !important;
-    border-radius: 0px !important;
-    background-color: var(--clr-surface-a0);
-    color: var(--clr-text-a30);
-    padding: 0.4rem 0.8rem !important;
-    font-weight: 700;
+.modal-dialog {
+    padding: 1rem !important;
 }
 
-#assetBtnGroup .btn-outline-primary:hover {
-    background-color: var(--clr-surface-a0) !important;
-    border-color: none !important;
-    color: var(--clr-text-a30) !important;
-    font-weight: 700;
-}
-
-#assetBtnGroup .btn-check:checked+.btn-outline-primary {
-    background-color: var(--clr-surface-a20) !important;
+.modal-content {
+    max-width: 540px !important;
     color: var(--clr-text-a0) !important;
+    background-color: var(--clr-surface-a10) !important;
+    border-radius: 1rem !important;
+    border: 1px solid var(--clr-surface-a20) !important;
+}
+
+.modal-header {
+    border: none !important;
+}
+
+.modal-header button{
+    padding: 0px !important;
+    margin: 0px !important;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem !important;
+}
+
+.modal-header button:hover{
+    opacity: 0.8;
+}
+
+.modal-body {
+    padding: 0px 1rem !important;
+    margin: 0px !important;
+}
+
+.account-details {
+    gap: 0.4rem;
+    font-size: 1rem;
+    padding: 0.6rem;
+    border-bottom: 1px solid var(--clr-surface-a20);
+    background-color: var(--clr-surface-a20) !important;
+    border-radius: 100rem;
+}
+
+.account-details .wallet-icon {
+    background-color: #089981;
+}
+
+.trading-balance-container {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.trading-balance-container .title {
     font-weight: 700;
+    color: var(--clr-text-a30);
+}
+
+.trading-balance-container .balance {
+    margin-top: -0.6rem !important;
+    font-size: 2.5rem;
+}
+
+.d-w-btns-container button {
+    width: 96px;
+    border-radius: 0.6rem;
+    padding: 0.6rem;
+    background-color: transparent;
+    border: 1px solid var(--clr-surface-a20);
+}
+
+.modal-links {
+    padding: 0px !important;
+    margin: 1rem 0px !important;
+    list-style: none;
+}
+
+.modal-links li {
+    padding: 0.2rem 0px !important;
+}
+
+.modal-links li:last-child a {
+    color: #ff1744;
+}
+
+.modal-links li a{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    text-decoration: none;
+    color: var(--clr-text-a20);
+    font-size: 1rem;
+    
 }
 
 .trade-canvas {
@@ -102,7 +193,7 @@
     border: none;
     height: 36px;
     width: 96px;
-    border-radius: 100rem;
+    border-radius: 0.6rem;
     font-weight: 700;
     font-size: 1rem;
 }

@@ -45,11 +45,6 @@
     font-style: normal;
 }
 
-* {
-    padding: 0px !important;
-    margin: 0px !important;
-}
-
 body {
     font-size: 0.9rem !important;
     font-family: 'Montserrat' !important;
