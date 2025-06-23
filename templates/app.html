@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block header %}
+<div id="headerContainer" class="d-flex flex-column">
+    <div id="navBar" class="d-flex align-items-center justify-content-between">
+        <button id="cntWltBtn" class="d-flex align-items-center">
+            Connect wallet
+        </button>
+
+        <div class="d-flex align-items-center">
+            <button class="navbar-ic-btn">
+                <i class="ph ph-plus"></i>
+            </button>
+
+            <button class="navbar-ic-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTrades">
+                <i class="ph ph-briefcase"></i>
+            </button>
+
+            <button class="navbar-ic-btn">
+                <i class="ph ph-gear-six"></i>
+            </button>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+<div class="trade-canvas">
+
+    <div id="chart"></div>
+
+    <div class="action-btn-container d-flex flex-row" style="gap: 0.6rem;">
+        <button id="action-btn-1" data-action="CALL">CALL</button>
+        <button id="action-btn-2" data-action="PUT">PUT</button>
+    </div>
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'javascript/app.js' %}"></script>
+{% endblock %}

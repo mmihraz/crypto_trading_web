@@ -1,0 +1,59 @@
+:root {
+    color-scheme: dark;
+
+    /* Colors */
+    --clr-dark: #000000;
+    --clr-light: #ffffff;
+
+    --clr-text-a0: #ffffff;
+    --clr-text-a10: #f5f5f5;
+    --clr-text-a20: #e0e0e0;
+    --clr-text-a30: #9E9E9E;
+
+    --clr-primary-a0: #0a88f0;
+    --clr-primary-a10: #4994f2;
+    --clr-primary-a20: #69a1f4;
+    --clr-primary-a30: #83aef6;
+
+    --clr-surface-a0: #000000;
+    --clr-surface-a10: #1e1e1e;
+    --clr-surface-a20: #353535;
+    --clr-surface-a30: #4e4e4e;
+}
+
+/* --- Medium Weight (400) --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* --- Medium Weight (500) --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* --- Bold Weight (700) --- */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat-bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+body {
+    font-size: 0.9rem !important;
+    font-family: 'Montserrat' !important;
+    font-weight: 500 !important;
+    color: var(--clr-text-a0) !important;
+    background-color: var(--clr-surface-a0) !important;
+}

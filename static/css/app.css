@@ -1,0 +1,116 @@
+#headerContainer {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: transparent;
+    z-index: 10;
+}
+
+#navBar {
+    height: 50px;
+    background-color: var(--clr-surface-a0);
+    border-bottom: 1px solid var(--clr-surface-a20);
+}
+
+#cntWltBtn {
+    height: 70%;
+    border: none;
+    margin-left: 1rem !important;
+    padding: 0px 0.8rem !important;
+    background-image: linear-gradient(-225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+    font-weight: 500;
+    border-radius: 0.6rem;
+}
+
+#cntWltBtn:hover {
+    background-image: linear-gradient(225deg, #AC32E4 0%, #7918F2 48%, #4801FF 100%);
+}
+
+.navbar-ic-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    margin-right: 1rem !important;
+    font-size: 1.5rem;
+}
+
+.navbar-ic-btn:hover {
+    opacity: 0.8;
+}
+
+.asset-container {
+    background-color: var(--clr-surface-a0);
+    border-bottom: 2.5px solid var(--clr-surface-a20);
+    padding: 0px 1rem !important;
+}
+
+#assetBtnGroup .btn-outline-primary {
+    border: none !important;
+    border-left: 2.5px solid var(--clr-surface-a20) !important;
+    border-right: 2.5px solid var(--clr-surface-a20) !important;
+    border-radius: 0px !important;
+    background-color: var(--clr-surface-a0);
+    color: var(--clr-text-a30);
+    padding: 0.4rem 0.8rem !important;
+    font-weight: 700;
+}
+
+#assetBtnGroup .btn-outline-primary:hover {
+    background-color: var(--clr-surface-a0) !important;
+    border-color: none !important;
+    color: var(--clr-text-a30) !important;
+    font-weight: 700;
+}
+
+#assetBtnGroup .btn-check:checked+.btn-outline-primary {
+    background-color: var(--clr-surface-a20) !important;
+    color: var(--clr-text-a0) !important;
+    font-weight: 700;
+}
+
+.trade-canvas {
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+}
+
+.add-asset-disc{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--clr-text-a30);
+    font-size: 1.2rem;
+}
+
+.add-asset-disc i {
+    margin: 0px 0.4rem !important;
+}
+
+.action-btn-container {
+    position: fixed;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9;
+}
+
+#action-btn-1 , #action-btn-2 {
+    border: none;
+    height: 36px;
+    width: 96px;
+    border-radius: 100rem;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#action-btn-1 {
+    background-color: #089981;
+}
+
+#action-btn-2 {
+    background-color: #f23645;
+}
