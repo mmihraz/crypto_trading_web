@@ -1,0 +1,132 @@
+.offcanvas {
+    background-color: var(--clr-surface-a0) !important;
+}
+
+.offcanvas-label {
+    font-weight: 700;
+    color: var(--clr-text-a0);
+    letter-spacing: 0.5px;
+}
+
+.offcanvas-body {
+    padding: 0px 1rem !important;
+}
+
+.wallet-details {
+    border-bottom: 1px solid var(--clr-surface-a20);
+}
+
+.wallet-details .logo {
+    width: 50px;
+    height: 50px;
+    background-color: var(--clr-surface-a10);
+    border-radius: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.wallet-details h4 {
+    padding: 0px !important;
+    margin-top: 0px !important;
+    color: white;
+    font-size: 1.2rem;
+    gap: 0.4rem;
+}
+
+.wallet-balance {
+    padding: 0.4rem 0px !important;
+}
+
+.trading-account-balance {
+    padding-bottom: 0.4rem !important;
+}
+
+.balance-title {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 0.9rem !important;
+    color: var(--clr-text-a30);
+    font-weight: 700;
+}
+
+.balance {
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 1.6rem;
+    color: var(--clr-text-a0);
+    font-weight: 700;
+}
+
+.wallet-action-btns {
+    border-top: 1px solid var(--clr-surface-a20);
+    border-bottom: 1px solid var(--clr-surface-a20);
+    padding: 0.4rem 0px;
+}
+
+.wallet-action-btns button{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    background-color: transparent;
+    color: var(--clr-primary-a0);
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.wallet-action-btns button .ic-container {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-primary-a0);
+    color: var(--clr-light);
+    border-radius: 100%;
+}
+
+.network-rd-btn-group .nt-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--clr-text-a0) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--clr-surface-a20) !important;
+    text-align: start;
+    border-radius: 0px !important;
+}
+
+.network-rd-btn-group .btn-check:checked+.nt-btn {
+    background-color: var(--clr-surface-a20);
+}
+
+.network-rd-btn-group .nt-logo {
+    width: 30px;
+    height: 30px;
+    background-color: var(--clr-surface-a10);
+    border-radius: 100%;
+}
+
+.othr-btns {
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.othr-btns button{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0px !important;
+    margin: 0px !important;
+    width: 100%;
+    color: var(--clr-primary-a0);
+    border: none;
+    border-radius: 0.6rem;
+    text-align: start;
+    font-size: 1rem;
+    background-color: transparent;
+    font-weight: 700;
+}
+

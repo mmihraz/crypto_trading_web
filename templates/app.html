@@ -1,84 +1,33 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block header %}
-<div id="headerContainer" class="d-flex flex-column">
+{% block content %}
+<div class="trade-canvas">
+
     <div id="navBar" class="d-flex align-items-center justify-content-between">
+
+        <button class="navbar-ic-btn">
+                <i class="ph-bold ph-plus"></i>
+            </button>
+
         <!-- If user not connect wallet -->
-        <button id="cntWltBtn" class="d-flex align-items-center" style="display: none !important;">
+        <button id="connectWallet" class="d-flex align-items-center">
             Connect wallet
         </button>
 
         <!-- user connected wallet -->
-        <button id="usrWltBtn" class="d-flex flex-row align-items-center justify-content-center" data-bs-toggle="modal"
-            data-bs-target="#accountModal">
+        <button id="usrWallet" class="d-flex flex-row align-items-center justify-content-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWallet" style="display: none !important;">
             <div class="wallet-icon">
             </div>
             <span class="wallet-address">Demo..VyR8</span>
-            <i class="ph-fill ph-caret-down"></i>
         </button>
 
-        <div class="d-flex align-items-center">
-            <button class="navbar-ic-btn">
-                <i class="ph ph-plus"></i>
-            </button>
-
-            <button class="navbar-ic-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTrades">
-                <i class="ph ph-briefcase"></i>
-            </button>
-
-            <button class="navbar-ic-btn">
-                <i class="ph ph-gear-six"></i>
-            </button>
-
-        </div>
     </div>
 
-</div>
-{% endblock %}
-
-{% block content %}
-<div class="modal fade" id="accountModal" tabindex="-1" aria-labelledby="accountModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header d-flex align-items-center justify-content-between">
-                 <button type="button" data-bs-dismiss="modal"><i class="ph ph-caret-left"></i></button>
-                <button type="button" data-bs-dismiss="modal"><i class="ph ph-x"></i></button>
-            </div>
-            <div class="modal-body">
-                <h3 class="account-details d-flex flex-row align-items-center" id="exampleModalLabel">
-                    <div class="wallet-icon">
-                    </div>
-                    <span>Demo..VyR8</span>
-                </h3>
-                <div class="trading-balance-container d-flex flex-column">
-                    <span class="title">Trading Account ( USDT )</span>
-                    <div class=" d-flex align-items-center">
-                        <span class="balance">0.00</span>
-                    </div>
-                    <div class="d-w-btns-container">
-                        <button><i class="ph ph-plus"></i> Add</button>
-                        <button><i class="ph ph-paper-plane-tilt"></i> Send</button>
-                    </div>
-                </div>
-
-                <ul class="modal-links">
-                    <li><a href=""><i class="ph ph-chat-teardrop-text"></i> Help & Support</a></li>
-                    <li><a href=""><i class="ph ph-x-square"></i> Disconnect</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="trade-canvas">
+    {% include 'offcanvas_wallet.html' %}
 
     <div id="chart"></div>
 
-    <div class="action-btn-container d-flex flex-row" style="gap: 0.6rem;">
-        <button id="action-btn-1" data-action="CALL">CALL</button>
-        <button id="action-btn-2" data-action="PUT">PUT</button>
-    </div>
 </div>
 {% endblock %}
 

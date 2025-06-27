@@ -52,3 +52,14 @@ body {
     color: var(--clr-text-a0) !important;
     background-color: var(--clr-surface-a0) !important;
 }
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    padding: 0px !important;
+    margin: 0px !important;
+}
