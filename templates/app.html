@@ -2,29 +2,56 @@
 {% load static %}
 
 {% block content %}
+<input type="hidden" id="isAuthenticated" value="{{ user.is_authenticated|yesno:'true,false' }}">
+
 <div class="trade-canvas">
-
     <div id="navBar" class="d-flex align-items-center justify-content-between">
-
-        <button class="navbar-ic-btn">
-                <i class="ph-bold ph-plus"></i>
-            </button>
-
-        <!-- If user not connect wallet -->
+        {% if not user.is_authenticated %}
         <button id="connectWallet" class="d-flex align-items-center">
             Connect wallet
         </button>
 
-        <!-- user connected wallet -->
-        <button id="usrWallet" class="d-flex flex-row align-items-center justify-content-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWallet" style="display: none !important;">
-            <div class="wallet-icon">
-            </div>
-            <span class="wallet-address">Demo..VyR8</span>
+        <button id="usrWallet" class="d-flex flex-row align-items-center justify-content-center"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasWallet" style="display: none !important;">
+            <span class="material-symbols-rounded">
+                wallet
+            </span>
         </button>
 
-    </div>
+        {% else %}
+        <button id="connectWallet" class="d-flex align-items-center" style="display: none !important;">
+            Connect wallet
+        </button>
 
-    {% include 'offcanvas_wallet.html' %}
+        <button id="usrWallet" class="d-flex flex-row align-items-center justify-content-center"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasWallet">
+            <span class="material-symbols-rounded">
+                wallet
+            </span>
+        </button>
+
+        {% include 'offcanvas_wallet.html' %}
+        {% endif %}
+
+        <div class="d-flex flex-row align-items-center" style="gap: 1rem;">
+            <button class="navbar-ic-btn" style="font-size: 1.5rem;">
+                <span class="material-symbols-rounded">
+                    add_2
+                </span>
+            </button>
+            <button class="navbar-ic-btn">
+                <span class="material-symbols-rounded">
+                    receipt
+                </span>
+            </button>
+            <button class="navbar-ic-btn">
+                <span class="material-symbols-rounded">
+                    hexagon
+                </span>
+            </button>
+        </div>
+
+    </div>
 
     <div id="chart"></div>
 
@@ -32,5 +59,5 @@
 {% endblock %}
 
 {% block script %}
-<script src="{% static 'javascript/app.js' %}"></script>
+<script type="module" src="{% static 'javascript/wallet.js' %}"></script>
 {% endblock %}

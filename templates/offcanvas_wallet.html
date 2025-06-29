@@ -1,100 +1,112 @@
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWallet">
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWallet">
 
     <div class="offcanvas-header d-flex align-items-center justify-content-end w-100">
-        <button type="button" data-bs-dismiss="offcanvas" class="icon-btn" style="font-size: 1.2rem;">
-            <i class="ph-bold ph-x"></i>
+        <button type="button" data-bs-dismiss="offcanvas" class="icon-btn">
+            <span class="material-symbols-rounded">
+                close
+            </span>
         </button>
+
     </div>
 
     <div class="offcanvas-body">
-        <div class="wallet-details">
+        <div class="wallet-address-container" id="walletContainer">
+            <h5>Hello,</h5>
 
-            <!-- wallet logo -->
-            <div class="logo">
+            <div class="d-flex flex-row align-items-center" style="gap: 0.4rem;">
+                <h4 id="walletAddress"></h4>
             </div>
-
-            <!-- wallet id -->
-            <h4 class="d-flex flex-row align-items-center">Demo..VyR8
-
-                <!-- wallet full id copy btn -->
-                <button class="icon-btn"><i class="ph-bold ph-copy"></i></button>
-            </h4>
         </div>
 
-        <div class="wallet-balance"> 
-            <h6 class="balance-title">Wallet Balance ( USDT )</h6>
-            <!-- connected wallet balance usdt -->
-            <h5 class="balance">0.00</h5>
+        <div class="wallet-balance">
+            <h6 class="balance-title">Wallet Balance (USDT)</h6>
+            <h5 id="usdtBalance" class="balance">0.00</h5>
         </div>
+
+
         <div class="trading-account-balance">
-            <h6 class="balance-title">Trading Account ( USDT )</h6>
+            <h6 class="balance-title">Trading Account (USDT)</h6>
             <h5 class="balance">0.00</h5>
         </div>
-        <div class="wallet-action-btns d-flex flex-row align-items-center">
+
+        <div class="action-btns d-flex flex-row align-items-center">
             <button>
                 <div class="ic-container">
-                    <i class="ph-bold ph-download-simple"></i>
+                    <span class="material-symbols-rounded">
+                        output_circle
+                    </span>
                 </div>
                 Deposit
             </button>
             <button>
                 <div class="ic-container">
-                    <i class="ph-bold ph-paper-plane-tilt"></i>
+                    <span class="material-symbols-rounded">bubble</span>
                 </div>
                 Send
             </button>
 
-            <!-- selected network (blockchain) -->
-            <button data-bs-toggle="offcanvas" data-bs-target="#offcanvasNetwork">
-                <div class="ic-container">
+        </div>
 
+        <div class="action-btns d-flex flex-row align-items-center">
+
+            <button id="networkSwitchBtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNetwork">
+                <div id="selectedNetworkLogo" class="ic-container">
                 </div>
-                BNB Chain
+                <span id="selectedNetworkName">Select Network</span>
             </button>
-        </div>
-        <div class="othr-btns d-flex flex-column">
-            <button><i class="ph-bold ph-arrows-left-right"></i> Trades</button>
-            <button><i class="ph-bold ph-question-mark"></i> Help</button>
-            <button><i class="ph-bold ph-gear-six"></i> Settings</button>
-            <button id="disconnectBtn" style="color: #dc2626;">
-                <i class="ph-bold ph-sign-out"></i> Disconnect
+
+            <button id="copyWalletAddress">
+                <div class="ic-container">
+                    <span class="material-symbols-rounded">content_copy</span>
+                </div>
+                Copy Adress
             </button>
+
         </div>
 
+        <div class="action-btns d-flex flex-row align-items-center">
+
+            <button>
+                <div class="ic-container">
+                    <span class="material-symbols-rounded">
+                        question_mark
+                    </span>
+                </div>
+                Help
+            </button>
+
+            <button id="disconnectBtn" style="color: #dc2626;" data-bs-dismiss="offcanvas">
+                <div class="ic-container" style="background-color: #dc2626;">
+                    <span class="material-symbols-rounded">
+                        logout
+                    </span>
+                </div>
+                Disconnect
+            </button>
+
+        </div>
     </div>
-
 </div>
 
-
-<!-- Offcanvas blockchain -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNetwork">
-
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNetwork">
     <div class="offcanvas-header d-flex align-items-center justify-content-between w-100">
         <button type="button" class="icon-btn" style="font-size: 1.2rem;" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasWallet">
-            <i class="ph-bold ph-caret-left"></i>
+            <span class="material-symbols-rounded">
+                arrow_back
+            </span>
         </button>
         <div class="offcanvas-label">
             SELECT NETWORK
         </div>
         <button type="button" data-bs-dismiss="offcanvas" class="icon-btn" style="font-size: 1.2rem;">
-            <i class="ph-bold ph-x"></i>
+            <span class="material-symbols-rounded">
+                close
+            </span>
         </button>
     </div>
-
     <div class="offcanvas-body">
-        <div class="network-rd-btn-group d-flex flex-column">
-            <input type="radio" name="nt-rd" class="btn-check" id="nt-1" autocomplete="off" checked>
-            <label class="btn nt-btn" for="nt-1">
-                <div class="nt-logo"></div>
-                <div class="nt-name">Bnb Smartchain</div>
-            </label>
-            <input type="radio" name="nt-rd" class="btn-check" id="nt-2" autocomplete="off">
-            <label class="btn nt-btn" for="nt-2">
-                <div class="nt-logo"></div>
-                <div class="nt-name">Bnb Smartchain</div>
-            </label>
+        <div id="networkList" class="network-rd-btn-group d-flex flex-column">
         </div>
     </div>
-
 </div>
